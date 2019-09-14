@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +34,7 @@ public class AccountActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        logoutbutton = (Button) findViewById(R.id.log_out_button);
+        logoutbutton = findViewById(R.id.log_out_button);
 
         logoutbutton.setOnClickListener(
                 new Button.OnClickListener(){

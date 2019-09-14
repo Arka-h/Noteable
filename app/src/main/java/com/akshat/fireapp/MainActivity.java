@@ -80,11 +80,11 @@ public class MainActivity extends AppCompatActivity {
         );
 
 
-        email = (EditText) findViewById(R.id.email);
-        password = (EditText) findViewById(R.id.password);
-        loginbutton = (Button) findViewById(R.id.loginbutton);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
+        loginbutton = findViewById(R.id.loginbutton);
 
-        forgotpass = (TextView) findViewById(R.id.forgot_password);
+        forgotpass = findViewById(R.id.forgot_password);
         SpannableString ss = new SpannableString(forgotpass.getText());
         ClickableSpan cs = new ClickableSpan() {
             @Override
@@ -92,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
                 sendPasswordReset();
             }
 
-            @Override
+            @Override//to dynamically change properties...
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
-                ds.setColor(Color.BLACK);
+                ds.setUnderlineText(false);
             }
         };
         ss.setSpan(cs,0,15, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
